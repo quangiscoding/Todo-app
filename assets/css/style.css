@@ -1,0 +1,263 @@
+:root {
+  /* Pill Colors */
+  --priority-high: 224, 82, 82;
+  --priority-mid: 212, 149, 58;
+  --priority-low: 90, 159, 212;
+
+  /* Colors */
+  --white: #f4f5f6;
+  --milk-white: #efefd3;
+
+  --light-grey: #ccc;
+  --light-green: #85b852;
+
+  --dark-grey: #514c49;
+  --dark-green: #629c4e;
+
+  /* Border Radius */
+  --radius-xs: 6px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+
+  /* Box shadow */
+  --box-shadow-sm: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Reset */
+
+button,
+a,
+input,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: all 150ms;
+  box-shadow: var(--box-shadow-sm);
+}
+
+button:hover {
+  transform: translateY(-2%);
+}
+
+button:active {
+  transform: translateY(2%);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--dark-green);
+}
+
+/* Common */
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Task Card */
+.task-card {
+  max-width: 1200px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: var(--box-shadow-sm);
+  border-radius: var(--radius-lg);
+}
+
+/* Header */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-top__title {
+  font-size: 3.2rem;
+  color: var(--dark-green);
+}
+
+.header-top__time {
+  font-size: 1.6rem;
+  color: var(--dark-grey);
+}
+
+.header-top__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
+
+.header-top__cta-btn {
+  font-size: 2rem;
+  padding: 16px 24px;
+  font-weight: 700;
+  color: var(--white);
+  border-radius: var(--radius-md);
+  background-color: var(--dark-green);
+}
+
+/* Progress Section */
+.progress-meta {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dark-grey);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.progress-bar {
+  margin-top: 12px;
+  height: 10px;
+  background: var(--milk-white);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--light-green);
+  width: 50%;
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}
+
+/* Filter */
+.filter-bar {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.filter-searchbar {
+  flex: 1;
+  position: relative;
+}
+
+.filter-search-btn {
+  position: absolute;
+  left: 20px;
+  top: 35%;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.filter-search-btn .fa-magnifying-glass {
+  font-size: 2rem;
+  color: var(--light-grey);
+  transition: all 150ms;
+}
+
+.filter-search-btn:hover .fa-magnifying-glass {
+  color: var(--light-green);
+}
+
+.filter-searchbox {
+  padding: 16px 0;
+  padding-left: 50px;
+
+  width: 100%;
+  border-radius: 30px;
+
+  font-size: 1.8rem;
+
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.filter-meta {
+  font-size: 2.2rem;
+  color: var(--dark-grey);
+}
+
+.filter-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  padding: 12px 16px;
+  border-radius: 30px;
+
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+  user-select: none;
+
+  background-color: var(--milk-white);
+  color: var(--dark-green);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.pill:hover,
+.pill.active {
+  border-color: var(--dark-green);
+}
+
+/* Footer */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.footer-stats {
+  font-size: 1.4rem;
+  color: var(--dark-grey);
+  font-weight: 600;
+  flex: 1;
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-export,
+.btn-clear {
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 150ms;
+}
+
+.btn-export {
+  background-color: var(--dark-green);
+  color: var(--white);
+}
+
+.btn-clear {
+  background-color: var(--milk-white);
+  color: var(--dark-green);
+}

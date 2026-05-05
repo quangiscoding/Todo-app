@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do App</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="task-card">
+        <!-- Header -->
+        <div class="card-header">
+          <!-- Header Top -->
+          <div class="header-top">
+            <div class="header-top__content">
+              <h1 class="header-top__title">Task Manager</h1>
+              <p class="header-top__time">Tuần này 12 - 18 tháng 5</p>
+            </div>
+            <div class="header-top__cta">
+              <button class="header-top__cta-btn">+ Thêm task</button>
+            </div>
+          </div>
+          <!-- Progress section -->
+          <div class="progress-section">
+            <!-- Meta -->
+            <div class="progress-meta">
+              <span class="progress-label">Tiến độ tuần</span>
+              <span class="progress-count"> 0 / 0 hoàn thành </span>
+            </div>
+            <!-- Green bar -->
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Filter -->
+        <section class="filter-bar">
+          <div class="filter-searchbar">
+            <button class="filter-search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" class="filter-searchbox" />
+          </div>
+          <div class="filter-pills">
+            <span class="pill pill-all" data-filter="all">All</span>
+            <span class="pill pill-high" data-filter="high">High</span>
+            <span class="pill pill-mid" data-filter="mid">Medium</span>
+            <span class="pill pill-low" data-filter="low">Low</span>
+            <span class="pill pill-deadline" data-filter="deadline">
+              Deadline
+            </span>
+          </div>
+        </section>
+        <section class="task-list" id="taskList">
+          <!-- Empty -->
+          <div class="empty-state" id="emptyState">
+            <p class="empty-message">
+              Chưa có task nào. Hãy thêm mới hoặc chuyển tab!
+            </p>
+            <i class="fa-regular fa-note-sticky"></i>
+          </div>
+        </section>
+        <!-- Footer -->
+        <footer class="card-footer">
+          <div class="footer-stats" id="footerStats">
+            0 chưa xong - 0 quá hạn
+          </div>
+          <div class="footer-actions">
+            <button class="btn-export" id="btnExport">Export</button>
+            <button class="btn-clear" id="btnClear">Xóa xong</button>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
